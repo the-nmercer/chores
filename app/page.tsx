@@ -55,7 +55,7 @@ export default function HomePage() {
     .from("tasks")
     .update({
       last_completed: new Date().toISOString().split("T")[0],
-      completed_by: completedBy, // 👈 save selection
+      completed_by: completedBy,
     })
     .eq("id", taskId);
 
