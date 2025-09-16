@@ -27,7 +27,7 @@ type Props = {
 
 export default function TaskTable({ tasks, categories, onComplete, onEdit }: Props) {
   const [isMobile, setIsMobile] = React.useState(false);
-  const [sortColumn, setSortColumn] = React.useState<keyof Task | "status" | null>(null);
+  const [sortColumn, setSortColumn] = React.useState<keyof Task | "status">("status");
   const [sortDirection, setSortDirection] = React.useState<"asc" | "desc">("asc");
 
   React.useEffect(() => {
