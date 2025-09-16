@@ -70,8 +70,8 @@ export default function TaskTable({ tasks, categories, onComplete, onEdit }: Pro
     if (!sortColumn) return tasks;
 
     return [...tasks].sort((a, b) => {
-      let aValue: any;
-      let bValue: any;
+      let aValue: string | number | undefined;
+      let bValue: string | number | undefined;
 
       if (sortColumn === "status") {
         const aDue = a.last_completed ? new Date(a.last_completed).getTime() + a.frequency_days * 86400000 : 0;
